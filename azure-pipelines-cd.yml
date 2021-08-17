@@ -24,7 +24,7 @@ steps:
 - task: deploynotebooks@0
   displayName: 'Publish notebooks to test workspace'
   inputs:
-    notebooksFolderPath: '$(System.DefaultWorkingDirectory)/notebooks-2'
+    notebooksFolderPath: '$(System.DefaultWorkingDirectory)/notebooks-3'
     workspaceFolder: '/Shared'
 
 - script: |
