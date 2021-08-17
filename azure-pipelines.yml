@@ -11,18 +11,6 @@ steps:
   inputs:
     versionSpec: '3.5'
 
-- task: configuredatabricks@0
-  displayName: 'Configure Databricks CLI'
-  inputs:
-    url: $(databricks_host)
-    token: $(databricks_token)
-
-- task: deploynotebooks@0
-  displayName: 'Publish notebooks to test workspace'
-  inputs:
-    notebooksFolderPath: '$(System.DefaultWorkingDirectory)/notebooks/nutter'
-    workspaceFolder: '/Shared/nutter'
-
 - script: |
     pip install nutter
   displayName: 'Install Nutter'
