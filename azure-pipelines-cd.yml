@@ -23,7 +23,7 @@ steps:
 
 - script: |
     mkdir $(System.DefaultWorkingDirectory)/notebook=3
-  displayName: 'List files in directory'
+  displayName: 'Create folder'
 
 - task: deploynotebooks@0
   displayName: 'Publish notebooks to test workspace'
