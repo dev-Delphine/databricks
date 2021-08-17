@@ -22,7 +22,7 @@ steps:
   displayName: 'List files in directory'
 
 - script: |
-    mkdir $(System.DefaultWorkingDirectory)/notebook=3
+    mkdir $(System.DefaultWorkingDirectory)/notebooks=3
   displayName: 'Create folder'
 
 - task: deploynotebooks@0
