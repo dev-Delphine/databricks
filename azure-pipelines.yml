@@ -1,7 +1,7 @@
-#Starter Nutter pipeline
+# Starter Nutter pipeline
 
 trigger:
-- azure-pipelines
+- develop
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -9,19 +9,7 @@ pool:
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.7'
-
-- task: configuredatabricks@0
-  displayName: 'Configure Databricks CLI'
-  inputs:
-    url: $(databricks_host)
-    token: $(databricks_token)
-
-- task: deploynotebooks@0
-  displayName: 'Publish notebooks to test workspace'
-  inputs:
-    notebooksFolderPath: '$(System.DefaultWorkingDirectory)/notebooks'
-    workspaceFolder: '/Shared'
+    versionSpec: '3.5'
 
 - script: |
     pip install nutter
