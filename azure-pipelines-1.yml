@@ -1,7 +1,7 @@
 #Starter Nutter pipeline
 
 trigger:
-- azure-pipelines
+- master
 
 pool:
   vmImage: 'ubuntu-latest'
