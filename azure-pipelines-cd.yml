@@ -21,14 +21,10 @@ steps:
     ls $(System.DefaultWorkingDirectory)/
   displayName: 'List files in directory'
 
-- script: |
-    mkdir $(System.DefaultWorkingDirectory)/notebooks
-  displayName: 'Create directory'
-
 - task: deploynotebooks@0
   displayName: 'Publish notebooks to test workspace'
   inputs:
-    notebooksFolderPath: '$(System.DefaultWorkingDirectory)/notebooks'
+    notebooksFolderPath: '$(System.DefaultWorkingDirectory)/notebooks-2'
     workspaceFolder: '/Shared'
 
 - script: |
